@@ -1,0 +1,390 @@
+/* Responsive & motion styles */
+@media (max-width: 1200px) {
+  #header .up,
+  #nav .nav-inner {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .section {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #section1 h2,
+  #section1 .boxWrap .slide,
+  #section3 h2,
+  #section3 .boxWrap>ul,
+  #section4,
+  #section4>ul {
+    width: 100%;
+  }
+
+  #section1,
+  #section3,
+  #section4,
+  #section1 .boxWrap,
+  #section3 .boxWrap {
+    height: auto;
+  }
+
+  #section1 .boxWrap .slide .img,
+  #section1 .boxWrap .slide .txt {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  #header {
+    height: 110px;
+  }
+  #header .up {
+    height: 70px;
+  }
+  #logo {
+    width: 180px;
+    height: 36px;
+  }
+  #logo a {
+    height: 36px;
+    background-size: contain;
+  }
+  #nav .nav-inner {
+    height: 58px;
+  }
+  #nav .nav-menu {
+    gap: 14px;
+    font-size: 13px;
+  }
+
+  .main {
+    height: 560px;
+  }
+  .main .imgB img {
+    height: 560px;
+  }
+
+  .s-next,
+  .s-prev {
+    width: 56px;
+    height: 56px;
+  }
+  .s-prev {
+    left: 16px;
+  }
+  .s-next {
+    right: 16px;
+  }
+
+  #section1 {
+    margin-top: 80px;
+  }
+  #section1 h2,
+  #section3 h2 {
+    font-size: 24px;
+  }
+  #section1 .boxWrap .slide,
+  #section1 .boxWrap .slide .img,
+  #section1 .boxWrap .slide .txt {
+    height: auto;
+  }
+
+  #section2 {
+    min-height: 520px;
+    margin-top: 80px;
+    padding: 48px 48px;
+    border-radius: 24px;
+  }
+  #section2 .sec2-inner {
+    width: 460px;
+    gap: 22px;
+  }
+  #section2 .sec2-copy h2 {
+    font-size: 30px;
+  }
+  #section2 .sec2-copy p {
+    font-size: 16px;
+  }
+  #section2 .sec2-card {
+    padding: 14px 16px;
+  }
+  #section2 .sec2-now strong {
+    font-size: 20px;
+  }
+
+  #section3 {
+    margin-top: 80px;
+  }
+  #section3 .section3-head {
+    align-items: flex-start;
+  }
+  #section3 .boxWrap>ul {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  #section3 .review-img {
+    height: 240px;
+  }
+
+  #section4 {
+    margin-top: 80px;
+  }
+  #section4>ul {
+    width: 100%;
+  }
+
+  #footer {
+    height: auto;
+    margin-top: 60px;
+  }
+  #footer .footer-inner {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #footer .footer-brand,
+  #footer .footer-links {
+    text-align: left;
+  }
+  #footer .footer-family {
+    margin-left: 0;
+  }
+  #footer .footer-family-wrap {
+    align-items: flex-start;
+  }
+  #footer .footer-family-panel {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    height: auto;
+  }
+  #header .up {
+    height: auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .util {
+    float: none;
+  }
+  #logo {
+    position: static;
+    transform: none;
+    width: 140px;
+    height: 28px;
+  }
+  #logo a {
+    height: 28px;
+    background-size: contain;
+  }
+  .util ul {
+    margin-top: 0;
+    font-size: 12px;
+    gap: 6px;
+  }
+  .util ul li {
+    padding: 0 4px;
+  }
+  .util ul li + li::before{
+    margin-right: 6px;
+  }
+
+  #nav {
+    height: auto;
+  }
+  #nav .nav-inner {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  #nav .nav-menu {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    font-size: 12px;
+  }
+
+  .main {
+    height: 420px;
+  }
+  .main .imgB img {
+    height: 420px;
+  }
+
+  .s-next,
+  .s-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .s-prev {
+    left: 8px;
+  }
+  .s-next {
+    right: 8px;
+  }
+
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #section1 {
+    margin-top: 60px;
+  }
+  #section1 h2,
+  #section3 h2 {
+    font-size: 22px;
+  }
+
+  #section2 {
+    min-height: auto;
+    margin-top: 60px;
+    padding: 36px 24px;
+    background-position: center top;
+  }
+  #section2 .sec2-inner {
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+  }
+  #section2 .sec2-copy h2 {
+    font-size: 26px;
+  }
+  #section2 .sec2-copy p {
+    font-size: 15px;
+  }
+  #section2 .sec2-card {
+    gap: 12px;
+  }
+  #section2 .sec2-thumb {
+    width: 96px;
+    height: 96px;
+  }
+  #section2 .sec2-thumb img {
+    width: 78px;
+    height: 78px;
+  }
+  #section2 .sec2-now strong {
+    font-size: 20px;
+  }
+
+  #section3 .section3-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  #section3 .boxWrap>ul {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  #section3 .review-img {
+    height: 220px;
+  }
+
+  #section4>ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #footer {
+    font-size: 12px;
+  }
+  #footer .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  #footer .footer-family {
+    width: 100%;
+    margin-left: 0;
+  }
+  #footer .footer-brand,
+  #footer .footer-links {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  #nav .nav-menu {
+    gap: 8px;
+    font-size: 11px;
+  }
+  #nav .nav-menu li {
+    flex: 1 1 33%;
+    text-align: center;
+  }
+  .main {
+    height: 320px;
+  }
+  .main .imgB img {
+    height: 320px;
+  }
+  #section1 h2,
+  #section3 h2 {
+    font-size: 20px;
+  }
+  #section3 .section3-more {
+    font-size: 13px;
+  }
+  #section3 .review-img {
+    height: 200px;
+  }
+  #section3 .review-product img {
+    width: 40px;
+    height: 40px;
+  }
+  #section3 .review-text {
+    font-size: 13px;
+  }
+  #section2 {
+    padding: 28px 16px;
+    border-radius: 20px;
+  }
+  #section2 .sec2-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #section2 .sec2-thumb {
+    width: 100%;
+    height: 120px;
+  }
+  #section2 .sec2-thumb img {
+    width: 110px;
+    height: 110px;
+  }
+  #section2 .sec2-title {
+    font-size: 15px;
+  }
+  #section2 .sec2-now strong {
+    font-size: 18px;
+  }
+  #footer .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  #footer .footer-family {
+    width: 100%;
+  }
+  #footer .footer-family-panel {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+  #footer .footer-family-wrap {
+    width: 100%;
+  }
+  #footer .footer-family-panel a {
+    padding: 12px 16px;
+  }
+  #footer .footer-brand,
+  #footer .footer-links {
+    text-align: left;
+  }
+}

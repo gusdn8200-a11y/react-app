@@ -1,0 +1,8 @@
+export { default as Util } from './Util'
+export { default as Nav } from './Nav'
+export { default as Main } from './Main'
+export { default as Sec1 } from './Sec1'
+export { default as Sec2 } from './Sec2'
+export { default as Sec3 } from './Sec3'
+export { default as Sec4 } from './Sec4'
+export { default as Footer } from './Footer'
