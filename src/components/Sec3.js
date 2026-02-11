@@ -1,7 +1,8 @@
 function Sec3(props) {
+  const publicUrl = process.env.PUBLIC_URL || "";
   const item = props.s3?.[props.i];
-  const imgSrc = `./img/s4_${props.i + 1}.jpg`;
-  const thumbSrc = `./img/s4_${props.i + 1}s.jpg`;
+  const imgSrc = `${publicUrl}/img/s4_${props.i + 1}.jpg`;
+  const thumbSrc = `${publicUrl}/img/s4_${props.i + 1}s.jpg`;
 
   return (
     <li className="review-card">
@@ -15,7 +16,7 @@ function Sec3(props) {
             <p>{item?.title ?? ""}</p>
           </div>
           <div className="review-meta">
-            <img src="./img/sta.png" alt="별점" />
+            <img src={`${publicUrl}/img/sta.png`} alt="별점" />
             <span>{item?.user ?? ""}</span>
           </div>
           <p className="review-text">{item?.review ?? ""}</p>

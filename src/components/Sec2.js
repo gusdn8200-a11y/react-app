@@ -1,4 +1,5 @@
 function Sec2() {
+  const publicUrl = process.env.PUBLIC_URL || "";
   return (
     <section id="section2">
       <div className="sec2-inner">
@@ -10,7 +11,7 @@ function Sec2() {
         <div className="sec2-cards">
           <article className="sec2-card">
             <div className="sec2-thumb">
-              <img src="./img/s3_1.jpg" alt="레모나산 비타민C 150포 - 카카오 프렌즈" />
+              <img src={`${publicUrl}/img/s3_1.jpg`} alt="레모나산 비타민C 150포 - 카카오 프렌즈" />
             </div>
             <div className="sec2-info">
               <p className="sec2-title">레모나산 비타민C 150포 - 카카오 프렌즈</p>
@@ -26,7 +27,7 @@ function Sec2() {
           </article>
           <article className="sec2-card">
             <div className="sec2-thumb">
-              <img src="./img/s3_2.png" alt="레모나산 비타민C 150포 x 2박스 - 카카오 (쇼핑백 대 증정)" />
+              <img src={`${publicUrl}/img/s3_2.png`} alt="레모나산 비타민C 150포 x 2박스 - 카카오 (쇼핑백 대 증정)" />
             </div>
             <div className="sec2-info">
               <p className="sec2-title">레모나산 비타민C 150포 x 2박스 - 카카오 (쇼핑백 대 증정)</p>

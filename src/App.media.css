@@ -91,6 +91,9 @@
   #section1 .boxWrap .slide .txt {
     height: auto;
   }
+  #section1 .boxWrap .slide .img img {
+    height: auto;
+  }
 
   #section2 {
     min-height: 520px;

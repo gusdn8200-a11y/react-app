@@ -1,4 +1,4 @@
-
+const publicUrl = process.env.PUBLIC_URL || "";
 var s1=[
     {id:0,t:'경남제약 칼로스탑 15포 + 칼로컨트롤 15포 x 1박스',d:'30,800원',p: '35% 19,900원'},
     {id:1,t:'레모나 지속성 비타민C 1000mg x 3박스',d:'65,700원',p: '47% 34,900원'},
@@ -10,14 +10,14 @@ var s1=[
     {id:7,t:'경남제약 유기농 엑스트라버진 올리브오일 14포 x 8박스+추가 2박스',d:'207,200원',p: '52% 99,000원'}
 ];
 let s1Imgs=[
-    "./img/s2_1.jpg",
-    "./img/s2_2.jpg",
-    "./img/s2_3.png",
-    "./img/s2_4.jpg",
-    "./img/s2_5.png",
-    "./img/s2_6.jpg",
-    "./img/s2_7.jpg",
-    "./img/s2_8.png"
+    `${publicUrl}/img/s2_1.jpg`,
+    `${publicUrl}/img/s2_2.jpg`,
+    `${publicUrl}/img/s2_3.png`,
+    `${publicUrl}/img/s2_4.jpg`,
+    `${publicUrl}/img/s2_5.png`,
+    `${publicUrl}/img/s2_6.jpg`,
+    `${publicUrl}/img/s2_7.jpg`,
+    `${publicUrl}/img/s2_8.png`
 ];
 
 let s3=[

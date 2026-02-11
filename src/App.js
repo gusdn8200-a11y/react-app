@@ -9,10 +9,20 @@ import './App.css';
 import './App.media.css';
 
 function App() {
-  const mainImgs = ["./img/s1.png", "./img/s2.png", "./img/s3.jpg", "./img/s4.png"];
+  const publicUrl = process.env.PUBLIC_URL || "";
+  const mainImgs = [
+    `${publicUrl}/img/s1.png`,
+    `${publicUrl}/img/s2.png`,
+    `${publicUrl}/img/s3.jpg`,
+    `${publicUrl}/img/s4.png`
+  ];
+  const appStyle = {
+    "--logo-img": `url(${publicUrl}/img/logo.png)`,
+    "--section2-bg": `url(${publicUrl}/img/s3bg.jpg)`
+  };
 
   return (
-    <div className="App">
+    <div className="App" style={appStyle}>
       <header id="header">
         <div className="up">
           <h1 id="logo"><a href="#"></a></h1>

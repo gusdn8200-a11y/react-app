@@ -42,7 +42,10 @@ img{
 #logo a{
   display: block;
   height: 60px;
-  background: url(../public/img/logo.png) no-repeat center/contain;
+  background-image: var(--logo-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .util{
   float: right;
@@ -143,10 +146,18 @@ img{
   margin-top: 24px;
 }
 
+.main .imgB{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
 .main .imgB img{
   width: 100%;
   height: 676px;  
-  object-fit: cover;
+  object-fit: contain;
 }
 .s-next,
 .s-prev{
@@ -257,9 +268,15 @@ img{
   width: 464px;
   height: 464px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
 #section1 .boxWrap .slide .img img{
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 #section1 .boxWrap .slide .txt{
   width: 464px;
@@ -299,7 +316,11 @@ img{
   position: relative;
   border-radius: 28px;
   overflow: hidden;
-  background: #fee993 url(../public/img/s3bg.jpg) no-repeat left center / cover;
+  background-color: #fee993;
+  background-image: var(--section2-bg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
   display: flex;
   align-items: center;
   padding: 64px 72px;
@@ -452,11 +473,15 @@ img{
   width: 100%;
   height: 260px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
 }
 #section3 .review-img img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 #section3 .review-body{
   padding: 16px 18px 20px;
@@ -476,7 +501,7 @@ img{
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: contain;
 }
 #section3 .review-product p{
   font-size: 15px;

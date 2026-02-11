@@ -1,4 +1,5 @@
 function Util() {
+  const publicUrl = process.env.PUBLIC_URL || "";
   return (
     <div className="util">
       <ul>
@@ -7,7 +8,7 @@ function Util() {
         <li><a href="#">고객센터</a></li>
         <li className="sns">
           <a href="#">
-            <img src="./img/sns.png" alt="sns" />
+            <img src={`${publicUrl}/img/sns.png`} alt="sns" />
             <span>SNS</span>
           </a>
         </li>
