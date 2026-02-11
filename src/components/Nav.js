@@ -1,8 +1,23 @@
+import { useState } from 'react';
+
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav id="nav">
+    <nav id="nav" className={isOpen ? "is-open" : ""}>
       <div className="nav-inner">
-        <ul className="nav-menu">
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "메뉴 닫기" : "메뉴 열기"}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <ul className="nav-menu" id="nav-menu">
           {[
             "히스토리",
             "브랜드",
@@ -20,7 +35,7 @@ function Nav() {
             "고객센터"
           ].map((label) => (
             <li key={label}>
-              <a href="#">{label}</a>
+              <a href="#" onClick={() => setIsOpen(false)}>{label}</a>
             </li>
           ))}
         </ul>

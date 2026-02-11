@@ -141,7 +141,7 @@
 
   #footer {
     height: auto;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   #footer .footer-inner {
     width: 100%;
@@ -208,13 +208,42 @@
     height: auto;
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
     padding: 12px 16px;
   }
+  #nav .nav-toggle {
+    display: inline-flex;
+    align-self: flex-end;
+  }
   #nav .nav-menu {
-    flex-wrap: wrap;
-    row-gap: 6px;
-    font-size: 12px;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    font-size: 14px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0 6px;
+  }
+  #nav .nav-menu li {
+    width: 100%;
+  }
+  #nav .nav-menu li a {
+    display: block;
+    padding: 12px 10px;
+  }
+  #nav.is-open .nav-menu {
+    max-height: 70vh;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 6px;
+    border-color: #eee;
   }
 
   .main {
@@ -316,12 +345,10 @@
 
 @media (max-width: 480px) {
   #nav .nav-menu {
-    gap: 8px;
-    font-size: 11px;
+    font-size: 13px;
   }
-  #nav .nav-menu li {
-    flex: 1 1 33%;
-    text-align: center;
+  #nav .nav-menu li a {
+    padding: 10px 8px;
   }
   .main {
     height: 320px;
