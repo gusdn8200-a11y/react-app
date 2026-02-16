@@ -767,6 +767,12 @@ img{
   padding: 14px 18px;
   color: #f1f1f1;
   font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+#footer .footer-family-panel a:hover,
+#footer .footer-family-panel a:focus-visible{
+  background: #6a6a6a;
+  color: #fff;
 }
 #footer .footer-family-wrap.is-open .footer-family-panel{
   opacity: 1;
