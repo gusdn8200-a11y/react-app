@@ -70,10 +70,10 @@
     height: 56px;
   }
   .s-prev {
-    left: 62px;
+    left: 44px;
   }
   .s-next {
-    right: 62px;
+    right: 44px;
   }
   .main .main-controls {
     bottom: 16px;
@@ -288,10 +288,10 @@
     height: 40px;
   }
   .s-prev {
-    left: 28px;
+    left: 18px;
   }
   .s-next {
-    right: 28px;
+    right: 18px;
   }
   .main .main-controls {
     bottom: 12px;
