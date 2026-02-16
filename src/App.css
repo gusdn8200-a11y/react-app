@@ -170,10 +170,13 @@ img{
 }
 .main{
   width: 100%;
-  height: 676px;
   position: relative;
-  overflow: hidden;
   margin-top: 24px;
+}
+.main .mySwiper{
+  height: 676px;
+  overflow: hidden;
+  position: relative;
 }
 
 .main .imgB{
@@ -186,7 +189,7 @@ img{
 }
 .main .imgB img{
   width: 100%;
-  height: 676px;  
+  height: 100%;
   object-fit: contain;
 }
 .s-next,
@@ -194,7 +197,7 @@ img{
   position: absolute;
   width: 68px;
   height: 68px;
-  top: 50%;
+  top: 46%;
   transform: translateY(-50%);
   text-indent: -9999px;
   background: rgba(255,255,255,0.9);
@@ -205,10 +208,10 @@ img{
   cursor: pointer;
 }
 .s-prev{
-  left: 30px;
+  left: 116px;
 }
 .s-next{
-  right: 30px;
+  right: 116px;
 }
 .s-prev::before,
 .s-next::before{
@@ -224,6 +227,86 @@ img{
 }
 .s-next::before{
   transform: translate(-50%, -50%) rotate(-135deg);
+}
+.main .main-controls{
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 12;
+}
+.main .main-pause{
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #bcbcbc;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.main .main-pause:hover{
+  background: #f7f7f7;
+}
+.main .main-pause:focus-visible{
+  outline: 2px solid #222;
+  outline-offset: 2px;
+}
+.main .main-pause::before,
+.main .main-pause::after{
+  content: '';
+  position: absolute;
+  top: 11px;
+  width: 4px;
+  height: 14px;
+  border-radius: 2px;
+  background: #222;
+}
+.main .main-pause::before{
+  left: 11px;
+}
+.main .main-pause::after{
+  right: 11px;
+}
+.main .main-pause.is-paused::before{
+  top: 9px;
+  left: 14px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #222;
+  border-radius: 0;
+  background: transparent;
+}
+.main .main-pause.is-paused::after{
+  display: none;
+}
+.main .main-pagination.swiper-pagination{
+  position: static;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.main .main-pagination .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  margin: 0 !important;
+  opacity: 1;
+  background: #d6d6d6;
+  border: 1px solid #b4b4b4;
+}
+.main .main-pagination .swiper-pagination-bullet-active{
+  border-radius: 50%;
+  background: #222;
+  border-color: #222;
 }
 
 .section{

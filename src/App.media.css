@@ -60,10 +60,7 @@
     font-size: 13px;
   }
 
-  .main {
-    height: 560px;
-  }
-  .main .imgB img {
+  .main .mySwiper {
     height: 560px;
   }
 
@@ -73,10 +70,45 @@
     height: 56px;
   }
   .s-prev {
-    left: 16px;
+    left: 62px;
   }
   .s-next {
-    right: 16px;
+    right: 62px;
+  }
+  .main .main-controls {
+    bottom: 16px;
+    gap: 12px;
+  }
+  .main .main-pause {
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+  }
+  .main .main-pause::before,
+  .main .main-pause::after {
+    top: 10px;
+    width: 3px;
+    height: 12px;
+  }
+  .main .main-pause::before {
+    left: 10px;
+  }
+  .main .main-pause::after {
+    right: 10px;
+  }
+  .main .main-pause.is-paused::before {
+    top: 9px;
+    left: 12px;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 10px;
+  }
+  .main .main-pagination.swiper-pagination {
+    gap: 10px;
+  }
+  .main .main-pagination .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
   }
 
   #section1 {
@@ -246,10 +278,7 @@
     border-color: #eee;
   }
 
-  .main {
-    height: 420px;
-  }
-  .main .imgB img {
+  .main .mySwiper {
     height: 420px;
   }
 
@@ -259,10 +288,45 @@
     height: 40px;
   }
   .s-prev {
-    left: 8px;
+    left: 28px;
   }
   .s-next {
-    right: 8px;
+    right: 28px;
+  }
+  .main .main-controls {
+    bottom: 12px;
+    gap: 10px;
+  }
+  .main .main-pause {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+  }
+  .main .main-pause::before,
+  .main .main-pause::after {
+    top: 10px;
+    width: 2px;
+    height: 10px;
+  }
+  .main .main-pause::before {
+    left: 9px;
+  }
+  .main .main-pause::after {
+    right: 9px;
+  }
+  .main .main-pause.is-paused::before {
+    top: 9px;
+    left: 11px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 9px;
+  }
+  .main .main-pagination.swiper-pagination {
+    gap: 9px;
+  }
+  .main .main-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 
   .section {
@@ -350,10 +414,7 @@
   #nav .nav-menu li a {
     padding: 10px 8px;
   }
-  .main {
-    height: 320px;
-  }
-  .main .imgB img {
+  .main .mySwiper {
     height: 320px;
   }
   #section1 h2,

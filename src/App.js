@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Util, Nav, Main, Sec1, Sec2, Sec3, Sec4, Footer } from './components';
 import { s1, s1Imgs, s3, s4 } from './data';
 import './App.css';
@@ -20,6 +21,21 @@ function App() {
     "--logo-img": `url(${publicUrl}/img/logo.png)`,
     "--section2-bg": `url(${publicUrl}/img/s3bg.jpg)`
   };
+  const [mainSwiper, setMainSwiper] = useState(null);
+  const [isMainPaused, setIsMainPaused] = useState(false);
+
+  const handleMainAutoplayToggle = () => {
+    if (!mainSwiper?.autoplay) return;
+
+    if (isMainPaused) {
+      mainSwiper.autoplay.start();
+      setIsMainPaused(false);
+      return;
+    }
+
+    mainSwiper.autoplay.stop();
+    setIsMainPaused(true);
+  };
 
   return (
     <div className="App" style={appStyle}>
@@ -32,17 +48,25 @@ function App() {
       </header>
       <div className="main">
         <Swiper
+          onSwiper={(swiper) => {
+            setMainSwiper(swiper);
+            setIsMainPaused(false);
+          }}
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
-          }}          
+          }}
+          pagination={{
+            clickable: true,
+            el: ".main-pagination",
+          }}
           navigation={{
             nextEl: ".s-next",
             prevEl: ".s-prev",
           }}
-          modules={[Autoplay, Navigation]}
+          modules={[Autoplay, Navigation, Pagination]}
           className="mySwiper"
         >
           {mainImgs.map((src, i) => (
@@ -52,6 +76,15 @@ function App() {
           ))}
           <button className="s-next">다음</button>
           <button className="s-prev">이전</button>
+          <div className="main-controls">
+            <button
+              type="button"
+              className={`main-pause${isMainPaused ? " is-paused" : ""}`}
+              onClick={handleMainAutoplayToggle}
+              aria-label={isMainPaused ? "메인 슬라이드 자동재생 시작" : "메인 슬라이드 자동재생 멈춤"}
+            ></button>
+            <div className="main-pagination"></div>
+          </div>
         </Swiper>
       </div>
       <div className="section">
