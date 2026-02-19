@@ -1,7 +1,11 @@
 function Main(props) {
   const imgSrc = props.imgSrc;
+  const handlePlaceholderLink = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <a href="#">
+    <a href="/" onClick={handlePlaceholderLink}>
       <div className="imgB">
         <img src={imgSrc} alt={props.alt ?? "slide"} />
       </div>

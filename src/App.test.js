@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders main section heading', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingElement = screen.getByRole('heading', {
+    name: /오늘부터 시작하는 신상 건강 아이템/,
+  });
+  expect(headingElement).toBeInTheDocument();
 });

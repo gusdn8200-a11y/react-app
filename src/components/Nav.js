@@ -2,6 +2,11 @@ import { useState } from 'react';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const handleNavItemClick = (event) => {
+    event.preventDefault();
+    setIsOpen(false);
+  };
+
   return (
     <nav id="nav" className={isOpen ? "is-open" : ""}>
       <div className="nav-inner">
@@ -35,7 +40,7 @@ function Nav() {
             "고객센터"
           ].map((label) => (
             <li key={label}>
-              <a href="#" onClick={() => setIsOpen(false)}>{label}</a>
+              <a href="/" onClick={handleNavItemClick}>{label}</a>
             </li>
           ))}
         </ul>

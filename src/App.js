@@ -36,12 +36,19 @@ function App() {
     mainSwiper.autoplay.stop();
     setIsMainPaused(true);
   };
+  const handlePlaceholderLink = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <div className="App" style={appStyle}>
       <header id="header">
         <div className="up">
-          <h1 id="logo"><a href="#"></a></h1>
+          <h1 id="logo">
+            <a href="/" onClick={handlePlaceholderLink} aria-label="레모나 홈">
+              <span className="sr-only">레모나 홈</span>
+            </a>
+          </h1>
           <Util />
         </div>
         <Nav />
@@ -97,6 +104,23 @@ function App() {
                 spaceBetween={24}
                 slidesPerView={3}
                 slidesPerGroup={3}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 12,
+                  },
+                  640: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 16,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 24,
+                  },
+                }}
                 autoplay={{
                   delay: 2500,
                   disableOnInteraction: false,
@@ -121,7 +145,7 @@ function App() {
               <p className="section3-kicker">실시간 리뷰</p>
               <h2>실시간 업데이트! 리얼 구매 후기</h2>
             </div>
-            <a href="#" className="section3-more">생생후기 더보기 &gt;</a>
+            <a href="/" onClick={handlePlaceholderLink} className="section3-more">생생후기 더보기 &gt;</a>
           </div>
           <div className="boxWrap">
             <ul>

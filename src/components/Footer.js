@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 function Footer() {
   const [familyOpen, setFamilyOpen] = useState(false)
+  const handlePlaceholderLink = (event) => {
+    event.preventDefault()
+  }
 
   return (
     <footer id="footer">
@@ -48,17 +51,17 @@ function Footer() {
               <span className="footer-caret">▾</span>
             </button>
             <ul className="footer-family-panel" id="footer-family-panel">
-              <li><a href="#">경남제약 홈페이지</a></li>
-              <li><a href="#">무좀엔PM</a></li>
-              <li><a href="#">자하생력</a></li>
-              <li><a href="#">미놀</a></li>
-              <li><a href="#">경남제약 패밀리몰</a></li>
+              <li><a href="/" onClick={handlePlaceholderLink}>경남제약 홈페이지</a></li>
+              <li><a href="/" onClick={handlePlaceholderLink}>무좀엔PM</a></li>
+              <li><a href="/" onClick={handlePlaceholderLink}>자하생력</a></li>
+              <li><a href="/" onClick={handlePlaceholderLink}>미놀</a></li>
+              <li><a href="/" onClick={handlePlaceholderLink}>경남제약 패밀리몰</a></li>
             </ul>
           </div>
           <ul className="footer-links">
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="/" onClick={handlePlaceholderLink}>이용약관</a></li>
+            <li><a href="/" onClick={handlePlaceholderLink}>개인정보처리방침</a></li>
+            <li><a href="/" onClick={handlePlaceholderLink}>이메일무단수집거부</a></li>
           </ul>
         </div>
       </div>

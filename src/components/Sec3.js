@@ -3,10 +3,13 @@ function Sec3(props) {
   const item = props.s3?.[props.i];
   const imgSrc = `${publicUrl}/img/s4_${props.i + 1}.jpg`;
   const thumbSrc = `${publicUrl}/img/s4_${props.i + 1}s.jpg`;
+  const handlePlaceholderLink = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <li className="review-card">
-      <a href="#" className="review-link">
+      <a href="/" onClick={handlePlaceholderLink} className="review-link">
         <div className="review-img">
           <img src={imgSrc} alt={item?.title ?? "리뷰 이미지"} />
         </div>
